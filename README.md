@@ -23,10 +23,14 @@ To use the resulting installation, please
 The base container can be built with
 ```
 docker build -t nfdi4chem/topspin:latest .
+docker tag nfdi4chem/topspin:latest nfdi4chem/topspin:4.1.1.2-0.3
 ```
+Tagging with a specific version is recommended.
 
 ## Running
 
-docker run -v $PWD/testdata:/data --rm -it nfdi4chem/topspin:4.1.1.2-0.2 /data/ADG10003u_023 /data/out.jdx
+```
+docker run -v $PWD/testdata:/data --rm -it nfdi4chem/topspin:4.1.1.2-0.3 /data/ADG10003u_023 /data/out.jdx
+```
 
 The included test data `ADG10003u_023` is a urine sample in the metabolomics study "MTBLS1: A metabolomic study of urinary changes in type 2 diabetes in human compared to the control group" https://www.ebi.ac.uk/metabolights/MTBLS1/.
